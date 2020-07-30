@@ -1,0 +1,21 @@
+<div class="header">
+  <h1 class="logo">
+    <a [routerLink]="['/']">🧡</a>
+  </h1>
+  <nav>
+    <ul>
+      <li routerLinkActive="active">
+        <a class="button button_bordered" [routerLink]="['/user']" *ngIf="!!isAuth">User</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!!!isAuth">
+        <a class="button button_bordered" [routerLink]="['/signin']">Sign In</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!!isAuth">
+        <a class="button button_bordered" (click)="logout()">Log out</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="false">
+        <a class="button button_bordered" [routerLink]="['/signup']">Sign Up</a>
+      </li>
+    </ul>
+  </nav>
+</div>

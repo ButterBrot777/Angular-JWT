@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  height: 5rem;
+  background-color: #373535;
+  color: white;
+}
+.copy {
+  padding-right: 2rem;
+}
+.footer-link {
+  color: antiquewhite;
+  text-decoration: none;
+}
