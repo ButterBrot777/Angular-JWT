@@ -1,0 +1,25 @@
+app-main-page {
+  background-image: url("../../../assets/jwt01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.wrapper--main-page {
+  display: flex;
+  flex-direction: column;
+}
+.and {
+  color: burlywood;
+}
+
+.image {
+  display: flex;
+  width: 50%;
+  height: 30%;
+  padding: 2rem;  
+}
+figure {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373535;
+
+  .logo {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 5rem;
+  }
+}
+
+nav {
+  display: flex;
+  color: white;
+  & > * {
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 1.5rem;
+      list-style: none;
+
+      a {
+        // color: white;
+        text-decoration: none;
+
+        &:active {
+          color: red;
+        }
+      }
+    }
+  }
+}

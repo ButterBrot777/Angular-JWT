@@ -1,0 +1,32 @@
+<div class="login-container">
+  <form class="form-login" (submit)="submit()">
+    <!-- [formGroup]="form"
+        (ngSubmit)="submit()" -->
+    <h2>Login</h2>
+
+    <div class="form-control">
+      <label for="email"></label>
+      <input
+        (input)="email = $event.target.value"
+        type="email"
+        placeholder="email"
+      />
+    </div>
+
+    <div class="form-control">
+      <label for="password"></label>
+      <input
+        (input)="password = $event.target.value"
+        type="password"
+        placeholder="password"
+      />
+    </div>
+
+    <button class="button button_colored" type="submit">
+      Login
+    </button>
+	</form>
+	<div class="error">
+		{{ errorMessage }}
+	</div>
+</div>

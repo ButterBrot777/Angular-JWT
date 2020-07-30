@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Authentication-JWT-Angular": {
+    "auth-jwt": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Authentication-JWT-Angular",
+            "outputPath": "dist/auth-jwt",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Authentication-JWT-Angular:build"
+            "browserTarget": "auth-jwt:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Authentication-JWT-Angular:build:production"
+              "browserTarget": "auth-jwt:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Authentication-JWT-Angular:build"
+            "browserTarget": "auth-jwt:build"
           }
         },
         "test": {
@@ -92,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -114,15 +114,24 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Authentication-JWT-Angular:serve"
+            "devServerTarget": "auth-jwt:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Authentication-JWT-Angular:serve:production"
+              "devServerTarget": "auth-jwt:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "Authentication-JWT-Angular"
+    }
+  },
+  "defaultProject": "auth-jwt",
+  "cli": {
+    "analytics": "59df04d5-0c5c-4f62-b671-2ac0c75b5334"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
